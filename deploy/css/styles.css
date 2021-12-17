@@ -478,3 +478,7 @@ textarea {
     font-size: 5rem;
   }
 }
+
+#featured-left {
+  image: url("../img/featured-left.jpg");
+}
