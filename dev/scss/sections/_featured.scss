@@ -1,0 +1,29 @@
+
+/* =============
+    Featured
+============= */
+
+#featured{
+    
+    div{
+        height: 50vh;
+       // border: 6px solid red;
+     h1{
+         font-weight: 300;
+         font-size: rem-calc(44);
+         color: $light-red;
+         text-decoration: underline;
+ 
+         @include md{
+             // padding-top: 30%;
+             font-size: rem-calc(60);
+         }
+ 
+         @include lg{
+             // padding-top: 10%;
+             font-size: rem-calc(80);
+         }
+     }
+    }
+    
+}           
