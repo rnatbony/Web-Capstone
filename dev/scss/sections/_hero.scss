@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center;
     height: 60vh;
-    text-align: center;
+    text-align: left;
 
     @include md{
         // height: 70vh;
@@ -24,8 +24,9 @@
     h1{
         font-weight: 300;
         font-size: rem-calc(44);
-        color: $white;
-        // padding-top: 20%;
+        color: $litegrey;
+        padding-top: 25vh;
+        padding-left: 10%;
 
         @include md{
             // padding-top: 30%;
