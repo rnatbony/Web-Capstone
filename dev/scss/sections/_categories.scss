@@ -1,12 +1,14 @@
-.triple-row {
+#page-wrapper {
+.row {
     display: flex;
     flex-direction: row;
     flex-basis: 100%;
-    flex: 3;
+    flex: 1;
   }
   .column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-  } 
+  }
+}
