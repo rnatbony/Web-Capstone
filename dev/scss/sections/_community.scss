@@ -1,0 +1,38 @@
+#community {
+
+    h1 {
+        font-weight: 300;
+        font-size: rem-calc(44);
+        color: $light-red;
+        text-decoration: underline;
+
+        @include md {
+            // padding-top: 30%;
+            font-size: rem-calc(60);
+        }
+
+        @include lg {
+            // padding-top: 10%;
+            font-size: rem-calc(80);
+        }
+    }
+
+    .row:after {
+        content: "";
+        clear: both;
+        display: table;
+        border: 2px solid #000;
+    }
+
+    .column {
+        float: left;
+        flex: 50%;
+        border: 2px solid #000;
+    }
+
+    @media screen and (max-width: 500px) {
+        .column {
+            width: 100%;
+        }
+    }
+}
