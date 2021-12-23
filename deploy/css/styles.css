@@ -535,10 +535,6 @@ p {
 /* =============
     Featured
 ============= */
-.some-page-wrapper {
-  margin: 16px;
-}
-
 #featured h1 {
   font-weight: 300;
   font-size: 2.75rem;
