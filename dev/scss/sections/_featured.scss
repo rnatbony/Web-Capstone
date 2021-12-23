@@ -1,8 +1,13 @@
 /* =============
     Featured
 ============= */
-
+.some-page-wrapper {
+    margin: 16px;
+    //background-color: red;
+  }
+  
 #featured {
+
     h1 {
         font-weight: 300;
         font-size: rem-calc(44);

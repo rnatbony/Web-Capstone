@@ -462,8 +462,7 @@ textarea {
 }
 
 .some-page-wrapper {
-  margin: 15px;
-  background-color: red;
+  margin: 16px;
 }
 
 .row-cat {
@@ -494,32 +493,52 @@ textarea {
           flex: 1;
 }
 
-.orange-column {
-  background-image: url(img/categories-lefty-pride.jpeg);
-  height: 100px;
+.art {
+  background-image: url(../img/categories-art.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 104px;
 }
 
-.double-orange-column {
-  background-image: url(img/categories-lefty-pride.jpeg);
-  height: 100px;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+.kitchen {
+  background-image: url(../img/categories-kitchen.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 104px;
 }
 
-.blue-column {
-  background-color: blue;
-  height: 100px;
+.lefty-pride {
+  background-image: url(../img/categories-lefty-pride.jpeg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 104px;
 }
 
-.green-column {
-  background-color: green;
-  height: 100px;
+.gardening {
+  background-image: url(../img/categories-gardening.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 104px;
+}
+
+p {
+  color: #fff;
+  font-weight: bold;
+  font-size: x-large;
+  text-shadow: 2px 2px #7C7979;
 }
 
 /* =============
     Featured
 ============= */
+.some-page-wrapper {
+  margin: 16px;
+}
+
 #featured h1 {
   font-weight: 300;
   font-size: 2.75rem;
