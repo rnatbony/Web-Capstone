@@ -555,19 +555,20 @@ p {
   content: "";
   clear: both;
   display: table;
-  border: 2px solid #000;
 }
 #community .column {
   float: left;
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
-  border: 2px solid #000;
 }
 @media screen and (max-width: 500px) {
   #community .column {
     width: 100%;
   }
+}
+#community p {
+  text-align: center;
 }
 
 /* =============
