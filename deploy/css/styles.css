@@ -609,7 +609,7 @@ p {
   }
 }
 @media screen and (max-width: 500px) {
-  #featured #scissors {
+  #featured .scissors {
     display: none;
   }
 }
