@@ -461,6 +461,9 @@ textarea {
   }
 }
 
+#categories {
+  padding-top: 16px;
+}
 @media (min-width: 768px) {
   #categories {
     display: -ms-grid;
@@ -478,15 +481,21 @@ textarea {
 }
 @media (min-width: 768px) {
   #categories > div {
-    grid-area: gallery;
+    grid-area: categories;
+  }
+}
+@media (min-width: 768px) {
+  #categories > div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
   }
 }
 #categories > div ul {
   display: -ms-grid;
   display: grid;
   gap: 24px;
-  -ms-grid-rows: 70vh 24px 70vh 24px 70vh;
-  grid-template-rows: repeat(3, 70vh);
+  -ms-grid-rows: 50vh 24px 50vh 24px 50vh;
+  grid-template-rows: repeat(3, 50vh);
 }
 @media (min-width: 768px) {
   #categories > div ul {

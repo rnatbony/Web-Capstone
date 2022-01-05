@@ -1,5 +1,7 @@
 #categories {
 
+padding-top: 16px;
+
   @include md{
       display: grid;
       grid-template-columns: 16px auto 16px;
@@ -13,14 +15,14 @@
   >div {
 
       @include md {
-          grid-area: gallery;
+          grid-area: categories;
       }
 
       ul {
           display: grid;
           gap: 24px;
           // grid-template-rows: 70vh 70vh 70vh;
-          grid-template-rows: repeat(3, 70vh);
+          grid-template-rows: repeat(3, 50vh);
 
           @include md {
               // grid-template-columns: 50vh auto;
