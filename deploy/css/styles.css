@@ -461,75 +461,125 @@ textarea {
   }
 }
 
-.some-page-wrapper {
-  margin: 16px;
+@media (min-width: 768px) {
+  #categories {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 16px auto 16px;
+    grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". categories .";
+  }
 }
-
-.row-cat {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
+@media (min-width: 1200px) {
+  #categories {
+    -ms-grid-columns: auto 1440px auto;
+    grid-template-columns: auto 1440px auto;
+  }
 }
-
-.column-cat {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+@media (min-width: 768px) {
+  #categories > div {
+    grid-area: gallery;
+  }
 }
-
-.art {
-  background-image: url(../img/categories-art.jpg);
+#categories > div ul {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+  -ms-grid-rows: 70vh 24px 70vh 24px 70vh;
+  grid-template-rows: repeat(3, 70vh);
+}
+@media (min-width: 768px) {
+  #categories > div ul {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 70vh 35vh;
+    grid-template-rows: 70vh 35vh;
+        grid-template-areas: "g1 g2" "g1 g3" "g1 g4";
+  }
+}
+@media (min-width: 1200px) {
+  #categories > div ul {
+    -ms-grid-columns: 60% auto;
+    grid-template-columns: 60% auto;
+    -ms-grid-rows: 35vh 35vh;
+    grid-template-rows: 35vh 35vh;
+        grid-template-areas: "g1 g2" "g1 g3" "g1 g4";
+  }
+}
+#categories > div ul li {
   background-size: cover;
   background-position: center;
-  text-align: center;
-  height: 104px;
 }
-
-.kitchen {
-  background-image: url(../img/categories-kitchen.jpg);
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  height: 104px;
+#categories > div ul #pride {
+  background-image: url("../img/categories-lefty-pride.jpeg");
 }
-
-.lefty-pride {
-  background-image: url(../img/categories-lefty-pride.jpeg);
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  height: 104px;
+@media (min-width: 768px) {
+  #categories > div ul #pride {
+    background-position: bottom;
+    grid-area: g1;
+  }
 }
-
-.gardening {
-  background-image: url(../img/categories-gardening.jpg);
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  height: 104px;
+#categories > div ul #art {
+  background-image: url("../img/categories-art.jpg");
 }
-
-p {
-  color: #fff;
-  font-weight: bold;
-  font-size: x-large;
-  text-shadow: 2px 2px #7C7979;
+@media (min-width: 768px) {
+  #categories > div ul #art {
+    grid-area: g2;
+  }
+}
+#categories > div ul #kitchen {
+  background-image: url("../img/categories-kitchen.jpg");
+}
+@media (min-width: 768px) {
+  #categories > div ul #kitchen {
+    grid-area: g3;
+  }
+}
+#categories > div ul #garden {
+  background-image: url("../img/categories-gardening.jpg");
+}
+@media (min-width: 768px) {
+  #categories > div ul #garden {
+    grid-area: g4;
+  }
+}
+@media (min-width: 768px) {
+  #categories > div ul #pride {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  #categories > div ul #art {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #categories > div ul #kitchen {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  #categories > div ul #garden {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+}
+@media (min-width: 1200px) {
+  #categories > div ul #pride {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  #categories > div ul #art {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #categories > div ul #kitchen {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  #categories > div ul #garden {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
 }
 
 /* =============

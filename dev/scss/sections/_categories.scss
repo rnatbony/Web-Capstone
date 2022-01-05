@@ -1,64 +1,84 @@
-.some-page-wrapper {
-    margin: 16px;
-    //background-color: red;
-  }
-  
-  .row-cat {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  
-  .column-cat {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-  }
-  
-  .art {
-    background-image: url(../img/categories-art.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    height: 104px;
+#categories {
+
+  @include md{
+      display: grid;
+      grid-template-columns: 16px auto 16px;
+      grid-template-areas: ". categories .";
   }
 
- // .triple-green-column {
-   // height: 100px;
-   // flex: 3;
-  //}
-  
-  
-  .kitchen {
-    background-image: url(../img/categories-kitchen.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    height: 104px;
- 
-  }
-  
-  .lefty-pride {
-    background-image: url(../img/categories-lefty-pride.jpeg);
-    background-size:cover;
-    background-position: center;
-    text-align: center;
-    height: 104px;
+  @include xl {
+      grid-template-columns: auto 1440px auto;
   }
 
-  .gardening {
-    background-image: url(../img/categories-gardening.jpg);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    height: 104px;
-  }
+  >div {
 
-p {
-color: $white;
-font-weight: bold;
-font-size: x-large;
-text-shadow: 2px 2px $grey;
+      @include md {
+          grid-area: gallery;
+      }
+
+      ul {
+          display: grid;
+          gap: 24px;
+          // grid-template-rows: 70vh 70vh 70vh;
+          grid-template-rows: repeat(3, 70vh);
+
+          @include md {
+              // grid-template-columns: 50vh auto;
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: 70vh 35vh;
+              grid-template-areas:
+                  "g1 g2"
+                  "g1 g3"
+                  "g1 g4";
+          }
+
+          @include xl {
+              grid-template-columns: 60% auto;
+              grid-template-rows: 35vh 35vh;
+              grid-template-areas:
+              "g1 g2"
+              "g1 g3"
+              "g1 g4";
+          }
+
+          li {
+              background-size: cover;
+              background-position: center;
+              // height: 70vh;
+              // border: 1px solid red;
+          }
+
+          #pride {
+              background-image: url("../img/categories-lefty-pride.jpeg");
+
+              @include md {
+                  background-position: bottom;
+                  grid-area: g1;
+              }
+          }
+
+          #art {
+              background-image: url("../img/categories-art.jpg");
+
+              @include md {
+                  grid-area: g2;
+              }
+          }
+
+          #kitchen {
+              background-image: url("../img/categories-kitchen.jpg");
+
+              @include md {
+                  grid-area: g3;
+              }
+          }
+          #garden {
+            background-image: url("../img/categories-gardening.jpg");
+
+            @include md {
+                grid-area: g4;
+            }
+        }
+      }
+  }
 }
