@@ -519,13 +519,11 @@ textarea {
 #categories > div ul li {
   background-size: cover;
   background-position: center;
+  vertical-align: 50%;
   text-align: center;
-  vertical-align: middle;
   color: #e5e5e5;
-  text-shadow: black;
+  text-shadow: #000;
   font-size: 250%;
-  -webkit-text-decoration-color: #9E2A2B;
-          text-decoration-color: #9E2A2B;
 }
 #categories > div ul #pride {
   background-image: url("../img/categories-lefty-pride.jpeg");
