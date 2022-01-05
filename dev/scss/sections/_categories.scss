@@ -1,6 +1,7 @@
 #categories {
 
 padding-top: 16px;
+padding-bottom: 16px;
 
   @include md{
       display: grid;
@@ -22,12 +23,12 @@ padding-top: 16px;
           display: grid;
           gap: 24px;
           // grid-template-rows: 70vh 70vh 70vh;
-          grid-template-rows: repeat(3, 50vh);
+          grid-template-rows: repeat(4, 35vh);
 
           @include md {
               // grid-template-columns: 50vh auto;
               grid-template-columns: repeat(2, 1fr);
-              grid-template-rows: 50vh 35vh;
+              grid-template-rows: 50vh 20vh;
               grid-template-areas:
                   "g1 g2"
                   "g1 g3"
@@ -36,7 +37,7 @@ padding-top: 16px;
 
           @include xl {
               grid-template-columns: 50% auto;
-              grid-template-rows: 35vh 35vh;
+              grid-template-rows: 30vh 30vh 30vh;
               grid-template-areas:
               "g1 g2"
               "g1 g3"
@@ -46,6 +47,15 @@ padding-top: 16px;
           li {
               background-size: cover;
               background-position: center;
+              text-align: center;
+              vertical-align: middle;
+              color: $litegrey;
+              text-shadow: black;
+              font-size: 250%;
+              text-decoration-color: $light-red;
+
+
+
               // height: 70vh;
               // border: 1px solid red;
           }

@@ -463,6 +463,7 @@ textarea {
 
 #categories {
   padding-top: 16px;
+  padding-bottom: 16px;
 }
 @media (min-width: 768px) {
   #categories {
@@ -494,15 +495,15 @@ textarea {
   display: -ms-grid;
   display: grid;
   gap: 24px;
-  -ms-grid-rows: 50vh 24px 50vh 24px 50vh;
-  grid-template-rows: repeat(3, 50vh);
+  -ms-grid-rows: 35vh 24px 35vh 24px 35vh 24px 35vh;
+  grid-template-rows: repeat(4, 35vh);
 }
 @media (min-width: 768px) {
   #categories > div ul {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 50vh 35vh;
-    grid-template-rows: 50vh 35vh;
+    -ms-grid-rows: 50vh 20vh;
+    grid-template-rows: 50vh 20vh;
         grid-template-areas: "g1 g2" "g1 g3" "g1 g4";
   }
 }
@@ -510,14 +511,21 @@ textarea {
   #categories > div ul {
     -ms-grid-columns: 50% auto;
     grid-template-columns: 50% auto;
-    -ms-grid-rows: 35vh 35vh;
-    grid-template-rows: 35vh 35vh;
+    -ms-grid-rows: 30vh 30vh 30vh;
+    grid-template-rows: 30vh 30vh 30vh;
         grid-template-areas: "g1 g2" "g1 g3" "g1 g4";
   }
 }
 #categories > div ul li {
   background-size: cover;
   background-position: center;
+  text-align: center;
+  vertical-align: middle;
+  color: #e5e5e5;
+  text-shadow: black;
+  font-size: 250%;
+  -webkit-text-decoration-color: #9E2A2B;
+          text-decoration-color: #9E2A2B;
 }
 #categories > div ul #pride {
   background-image: url("../img/categories-lefty-pride.jpeg");
