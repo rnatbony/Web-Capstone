@@ -27,7 +27,7 @@ padding-top: 16px;
           @include md {
               // grid-template-columns: 50vh auto;
               grid-template-columns: repeat(2, 1fr);
-              grid-template-rows: 70vh 35vh;
+              grid-template-rows: 50vh 35vh;
               grid-template-areas:
                   "g1 g2"
                   "g1 g3"
@@ -35,7 +35,7 @@ padding-top: 16px;
           }
 
           @include xl {
-              grid-template-columns: 60% auto;
+              grid-template-columns: 50% auto;
               grid-template-rows: 35vh 35vh;
               grid-template-areas:
               "g1 g2"
@@ -54,7 +54,6 @@ padding-top: 16px;
               background-image: url("../img/categories-lefty-pride.jpeg");
 
               @include md {
-                  background-position: bottom;
                   grid-area: g1;
               }
           }

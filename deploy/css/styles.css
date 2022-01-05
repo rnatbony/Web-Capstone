@@ -501,15 +501,15 @@ textarea {
   #categories > div ul {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 70vh 35vh;
-    grid-template-rows: 70vh 35vh;
+    -ms-grid-rows: 50vh 35vh;
+    grid-template-rows: 50vh 35vh;
         grid-template-areas: "g1 g2" "g1 g3" "g1 g4";
   }
 }
 @media (min-width: 1200px) {
   #categories > div ul {
-    -ms-grid-columns: 60% auto;
-    grid-template-columns: 60% auto;
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
     -ms-grid-rows: 35vh 35vh;
     grid-template-rows: 35vh 35vh;
         grid-template-areas: "g1 g2" "g1 g3" "g1 g4";
@@ -524,7 +524,6 @@ textarea {
 }
 @media (min-width: 768px) {
   #categories > div ul #pride {
-    background-position: bottom;
     grid-area: g1;
   }
 }
