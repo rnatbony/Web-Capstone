@@ -4,6 +4,16 @@
 
 #featured {
 
+    @include md{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". featured .";
+    }
+
+    @include xl {
+        grid-template-columns: auto 1440px auto;
+    }
+
     h1 {
         font-weight: 300;
         font-size: rem-calc(44);
@@ -21,28 +31,77 @@
         }
     }
 
-    .row:after {
-        content: "";
-        clear: both;
-        display: table;
-        border: 2px solid #000;
-    }
+    >div {
 
-    .column {
-        float: left;
-        flex: 50%;
-        border: 2px solid #000;
-    }
-
-    @media screen and (max-width: 500px) {
-        .column {
-            width: 100%;
+        @include md {
+            grid-area: featured;
         }
-    }
 
-    .scissors {
-        @media screen and (max-width: 500px) {
-            display: none;
+        ul {
+            display: grid;
+            gap: 24px;
+            // grid-template-rows: 70vh 70vh 70vh;
+            grid-template-rows: repeat(3, 70vh);
+
+            @include md {
+                // grid-template-columns: 50vh auto;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 70vh 35vh;
+                grid-template-areas:
+                    "g1 g1"
+                    "g2 g3";
+            }
+
+            @include xl {
+                grid-template-columns: 60% auto;
+                grid-template-rows: 35vh 35vh;
+                grid-template-areas:
+                    "g1 g2"
+                    "g1 g3";
+            }
+
+            li {
+                
+
+                a:link, a:visited{
+                    background-size: cover;
+                    background-position: center;
+                    height: 100%;
+                    width: 100%;
+                    display: inline-block;
+                }
+            }
+
+            #featured-1 {
+                @include md {
+                    background-position: bottom;
+                    grid-area: g1;
+                }
+
+                a{
+                    background-image: url("../img/featured-left.jpg");
+                }
+            }
+
+            #featured-2 {
+                @include md {
+                    grid-area: g2;
+                }
+
+                a{
+                    background-image: url("../img/featured-right.jpg");
+                }
+            }
+
+            #featured-3 {
+                
+                @include md {
+                    grid-area: g3;
+                }
+                a{
+                    background-image: url("../img/featured-middle.png");
+                }
+            }
         }
     }
 }
