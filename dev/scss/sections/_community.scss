@@ -4,41 +4,112 @@
 
 #community {
 
-    h1 {
-        font-weight: 300;
-        font-size: rem-calc(44);
-        color: $light-red;
-        text-decoration: underline;
-
-        @include md {
-            // padding-top: 30%;
-            font-size: rem-calc(60);
-        }
-
-        @include lg {
-            // padding-top: 10%;
-            font-size: rem-calc(80);
-        }
-    }
-
-    .row:after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-
-    .column {
-        float: left;
-        flex: 50%;
-    }
-
-    @media screen and (max-width: 500px) {
-        .column {
-            width: 100%;
-        }
-    }
-
-    p {
-        text-align: center;
-    }
-}
+        padding-top: 16px;
+        padding-bottom: 16px;
+        
+          @include md{
+              display: grid;
+              grid-template-columns: 16px auto 16px;
+              grid-template-areas: ". community .";
+          }
+        
+          @include xl {
+              grid-template-columns: auto 1440px auto;
+          }
+        
+          >div {
+        
+              @include md {
+                  grid-area: community;
+              }
+        
+              ul {
+                  display: grid;
+                  gap: 24px;
+                  // grid-template-rows: 70vh 70vh 70vh;
+                  grid-template-rows: repeat(4, 35vh);
+        
+                  @include md {
+                      // grid-template-columns: 50vh auto;
+                      grid-template-columns: repeat(2, 1fr);
+                      grid-template-rows: 40vh 40vh 40vh 40vh;
+                      grid-template-areas:
+                          "g1 g2"
+                          "g3 g4"
+                  }
+        
+                  @include xl {
+                      grid-template-columns: 50% auto;
+                      grid-template-rows: 30vh 30vh 30vh 30vh;
+                      grid-template-areas:
+                      "g1 g2"
+                      "g3 g4"
+                  }
+        
+                  li {
+                      background-size: cover;
+                      background-position: center;
+                    //   vertical-align: 50%;
+                    //   text-align: center;
+                      
+                     //@error text-shadow: $black;
+                    //   font-size: 250%;
+        
+        
+        
+                      // height: 70vh;
+                    //   border: 1px solid red;
+        
+                     //@function a:link, a:visited{
+                       //   border: 1px solid red;
+                       //   display: inline-block;
+                        //  height: 100%;
+                       //   width: 100%;
+                       //   text-decoration: none;
+                       //   color: blue;
+        
+                        >div{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+                            p{
+                                font-size: rem-calc(30);
+                            }
+                        }
+        
+                          
+                      }
+                  }
+        
+                  #computer {
+                      background-image: url("../img/comm-left.jpeg");
+        
+                      @include md {
+                          grid-area: g1;
+                      }
+                  }
+        
+                  #hands {
+                      background-image: url("../img/comm-right.jpg");
+        
+                      @include md {
+                          grid-area: g2;
+                      }
+                  }
+        
+                  #info {
+        
+                      @include md {
+                          grid-area: g3;
+                      }
+                  }
+                  #garden {
+        
+                    @include md {
+                        grid-area: g4;
+                    }
+                }
+              }
+          }
+        
