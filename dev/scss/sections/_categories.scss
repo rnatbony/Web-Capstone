@@ -64,7 +64,25 @@
                       width: 100%;
                       text-decoration: none;
                       color: $litegrey;
-                      text-shadow: $black;   
+                      text-shadow: $black;
+                      .ribbon-highlight {
+                        position: relative;
+                        margin: 0.1em;
+                      }
+                    
+                    .ribbon-highlight: before {
+                        content: "";
+                        z-index: -1;
+                        left: -0.5em;
+                        top: 0.1em;
+                        border-width: 0.5em;
+                        border-style: solid;
+                        border-color: $dark-red;
+                        position: absolute;
+                        width: 100%;
+                        border-left-color: transparent;
+                        border-right-color: transparent;
+                      } 
                     >div{
                         display: flex;
                         justify-content: center;
@@ -110,23 +128,5 @@
                 }
             }
           }
-      }
-
-      .ribbon-highlight{
-        position: relative;
-        margin: 0.1em;
-      }
-      .ribbon-highlight:before{
-        content: "";
-        z-index: -1;
-        left: -0.5em;
-        top: 0.1em;
-        border-width: 0.5em;
-        border-style: solid;
-        border-color: $dark-red;
-        position: absolute;
-        width: 100%;
-        border-left-color: transparent;
-        border-right-color: transparent;
       }
     }
