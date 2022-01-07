@@ -521,31 +521,17 @@ textarea {
   background-position: center;
   text-shadow: #000;
 }
-#categories > div ul li a:link, #categories > div ul li a:visited {
+#categories > div ul li a:link,
+#categories > div ul li a:visited {
   display: inline-block;
   height: 100%;
   width: 100%;
   text-decoration: none;
   color: #e5e5e5;
   text-shadow: #000;
-  .ribbon-highlight: before;
-  .ribbon-highlight-content: "";
-  .ribbon-highlight-z-index: -1;
-  .ribbon-highlight-left: -0.5em;
-  .ribbon-highlight-top: 0.1em;
-  .ribbon-highlight-border-width: 0.5em;
-  .ribbon-highlight-border-style: solid;
-  .ribbon-highlight-border-color: #540B0E;
-  .ribbon-highlight-position: absolute;
-  .ribbon-highlight-width: 100%;
-  .ribbon-highlight-border-left-color: transparent;
-  .ribbon-highlight-border-right-color: transparent;
 }
-#categories > div ul li a:link .ribbon-highlight, #categories > div ul li a:visited .ribbon-highlight {
-  position: relative;
-  margin: 0.1em;
-}
-#categories > div ul li a:link > div, #categories > div ul li a:visited > div {
+#categories > div ul li a:link > div,
+#categories > div ul li a:visited > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,7 +543,8 @@ textarea {
           align-items: center;
   height: 100%;
 }
-#categories > div ul li a:link > div h1, #categories > div ul li a:visited > div h1 {
+#categories > div ul li a:link > div h1,
+#categories > div ul li a:visited > div h1 {
   font-size: 1.875rem;
 }
 #categories > div ul #pride {
@@ -858,4 +845,18 @@ textarea {
 }
 #featured > div section ul #featured-3 a {
   background-image: url("../img/featured-middle.png");
+}
+#featured > div section ul #featured-3 .ribbon-highlight {
+  position: relative;
+  margin: 0.1em;
+  z-index: -1;
+  left: -0.5em;
+  top: 0.1em;
+  border-width: 0.5em;
+  border-style: solid;
+  border-color: #540B0E;
+  position: absolute;
+  width: 100%;
+  border-left-color: transparent;
+  border-right-color: transparent;
 }
