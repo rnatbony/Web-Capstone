@@ -664,8 +664,9 @@ textarea {
   display: -ms-grid;
   display: grid;
   gap: 24px;
-  -ms-grid-rows: 70vh 24px 70vh 24px 70vh;
-  grid-template-rows: repeat(3, 70vh);
+  -ms-grid-rows: 40vh 24px 0vh 24px 0vh;
+  grid-template-rows: 40vh 0vh 0vh;
+      grid-template-areas: "g1";
 }
 @media (min-width: 768px) {
   #featured > div section ul {
@@ -681,11 +682,11 @@ textarea {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
   }
-  #featured > div section ul > #art {
+  #categories > div ul #art {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
-  #featured > div section ul > #kitchen {
+  #categories > div ul #kitchen {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
@@ -704,11 +705,11 @@ textarea {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
   }
-  #featured > div section ul > #art {
+  #categories > div ul #art {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
-  #featured > div section ul > #kitchen {
+  #categories > div ul #kitchen {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
@@ -720,9 +721,13 @@ textarea {
   height: 100%;
   width: 100%;
   display: inline-block;
+  color: #7C7979;
 }
 @media (min-width: 768px) {
   #featured > div section ul #featured-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
     background-position: bottom;
     grid-area: g1;
   }
@@ -776,7 +781,7 @@ textarea {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
-  #featured > div section ul > #featured-2 {
+  #featured > div section ul #featured-2 {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
@@ -784,7 +789,7 @@ textarea {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
-  #featured > div section ul > #featured-3 {
+  #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
@@ -822,7 +827,7 @@ textarea {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
-  #featured > div section ul > #featured-2 {
+  #featured > div section ul #featured-2 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
@@ -830,7 +835,7 @@ textarea {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
-  #featured > div section ul > #featured-3 {
+  #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
