@@ -4,7 +4,7 @@
 
 #featured {
 
-    @include md{
+    @include md {
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". featured .";
@@ -14,22 +14,6 @@
         grid-template-columns: auto 1440px auto;
     }
 
-    h1 {
-        font-weight: 300;
-        font-size: rem-calc(44);
-        color: $light-red;
-        text-decoration: underline;
-
-        @include md {
-            // padding-top: 30%;
-            font-size: rem-calc(60);
-        }
-
-        @include lg {
-            // padding-top: 10%;
-            font-size: rem-calc(80);
-        }
-    }
 
     >div {
 
@@ -37,71 +21,96 @@
             grid-area: featured;
         }
 
-        ul {
-            display: grid;
-            gap: 24px;
-            // grid-template-rows: 70vh 70vh 70vh;
-            grid-template-rows: repeat(3, 70vh);
+        h1 {
+            font-weight: 300;
+            font-size: rem-calc(44);
+            color: $light-red;
+            text-decoration: underline;
 
             @include md {
-                // grid-template-columns: 50vh auto;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: 70vh 35vh;
-                grid-template-areas:
-                    "g1 g1"
-                    "g2 g3";
+                // padding-top: 30%;
+                font-size: rem-calc(60);
             }
 
-            @include xl {
-                grid-template-columns: 60% auto;
-                grid-template-rows: 35vh 35vh;
-                grid-template-areas:
-                    "g1 g2"
-                    "g1 g3";
+            @include lg {
+                // padding-top: 10%;
+                font-size: rem-calc(80);
             }
+        }
 
-            li {
-                
 
-                a:link, a:visited{
-                    background-size: cover;
-                    background-position: center;
-                    height: 100%;
-                    width: 100%;
-                    display: inline-block;
-                }
-            }
+        section {
 
-            #featured-1 {
+
+            ul {
+                display: grid;
+                gap: 24px;
+                // grid-template-rows: 70vh 70vh 70vh;
+                grid-template-rows: repeat(3, 70vh);
+
                 @include md {
-                    background-position: bottom;
-                    grid-area: g1;
+                    // grid-template-columns: 50vh auto;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: 70vh 35vh;
+                    grid-template-areas:
+                        "g1 g1"
+                        "g2 g3";
                 }
 
-                a{
-                    background-image: url("../img/featured-left.jpg");
-                }
-            }
-
-            #featured-2 {
-                @include md {
-                    grid-area: g2;
+                @include xl {
+                    grid-template-columns: 60% auto;
+                    grid-template-rows: 35vh 35vh;
+                    grid-template-areas:
+                        "g1 g2"
+                        "g1 g3";
                 }
 
-                a{
-                    background-image: url("../img/featured-right.jpg");
-                }
-            }
+                li {
 
-            #featured-3 {
-                
-                @include md {
-                    grid-area: g3;
+
+                    a:link,
+                    a:visited {
+                        background-size: cover;
+                        background-position: center;
+                        height: 100%;
+                        width: 100%;
+                        display: inline-block;
+                    }
                 }
-                a{
-                    background-image: url("../img/featured-middle.png");
+
+                #featured-1 {
+                    @include md {
+                        background-position: bottom;
+                        grid-area: g1;
+                    }
+
+                    a {
+                        background-image: url("../img/featured-left.jpg");
+                    }
+                }
+
+                #featured-2 {
+                    @include md {
+                        grid-area: g2;
+                    }
+
+                    a {
+                        background-image: url("../img/featured-right.jpg");
+                    }
+                }
+
+                #featured-3 {
+
+                    @include md {
+                        grid-area: g3;
+                    }
+
+                    a {
+                        background-image: url("../img/featured-middle.png");
+                    }
                 }
             }
         }
     }
+
 }
