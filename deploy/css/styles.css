@@ -502,8 +502,8 @@ textarea {
   #categories > div ul {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 50vh 20vh;
-    grid-template-rows: 50vh 20vh;
+    -ms-grid-rows: 30vh 30vh 30vh;
+    grid-template-rows: 30vh 30vh 30vh;
         grid-template-areas: "g1 g2" "g1 g3" "g1 g4";
   }
 }
@@ -519,11 +519,29 @@ textarea {
 #categories > div ul li {
   background-size: cover;
   background-position: center;
-  vertical-align: 50%;
-  text-align: center;
-  color: #e5e5e5;
   text-shadow: #000;
-  font-size: 250%;
+}
+#categories > div ul li a:link, #categories > div ul li a:visited {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: blue;
+}
+#categories > div ul li a:link > div, #categories > div ul li a:visited > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+#categories > div ul li a:link > div h1, #categories > div ul li a:visited > div h1 {
+  font-size: 1.875rem;
 }
 #categories > div ul #pride {
   background-image: url("../img/categories-lefty-pride.jpeg");

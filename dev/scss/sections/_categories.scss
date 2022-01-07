@@ -1,94 +1,114 @@
 #categories {
 
-padding-top: 16px;
-padding-bottom: 16px;
-
-  @include md{
-      display: grid;
-      grid-template-columns: 16px auto 16px;
-      grid-template-areas: ". categories .";
-  }
-
-  @include xl {
-      grid-template-columns: auto 1440px auto;
-  }
-
-  >div {
-
-      @include md {
-          grid-area: categories;
-      }
-
-      ul {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+      @include md{
           display: grid;
-          gap: 24px;
-          // grid-template-rows: 70vh 70vh 70vh;
-          grid-template-rows: repeat(4, 35vh);
-
+          grid-template-columns: 16px auto 16px;
+          grid-template-areas: ". categories .";
+      }
+    
+      @include xl {
+          grid-template-columns: auto 1440px auto;
+      }
+    
+      >div {
+    
           @include md {
-              // grid-template-columns: 50vh auto;
-              grid-template-columns: repeat(2, 1fr);
-              grid-template-rows: 50vh 20vh;
-              grid-template-areas:
+              grid-area: categories;
+          }
+    
+          ul {
+              display: grid;
+              gap: 24px;
+              // grid-template-rows: 70vh 70vh 70vh;
+              grid-template-rows: repeat(4, 35vh);
+    
+              @include md {
+                  // grid-template-columns: 50vh auto;
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: 30vh 30vh 30vh;
+                  grid-template-areas:
+                      "g1 g2"
+                      "g1 g3"
+                      "g1 g4";
+              }
+    
+              @include xl {
+                  grid-template-columns: 50% auto;
+                  grid-template-rows: 30vh 30vh 30vh;
+                  grid-template-areas:
                   "g1 g2"
                   "g1 g3"
                   "g1 g4";
-          }
-
-          @include xl {
-              grid-template-columns: 50% auto;
-              grid-template-rows: 30vh 30vh 30vh;
-              grid-template-areas:
-              "g1 g2"
-              "g1 g3"
-              "g1 g4";
-          }
-
-          li {
-              background-size: cover;
-              background-position: center;
-              vertical-align: 50%;
-              text-align: center;
-              color: $litegrey;
-              text-shadow: $black;
-              font-size: 250%;
-
-
-
-              // height: 70vh;
-              // border: 1px solid red;
-          }
-
-          #pride {
-              background-image: url("../img/categories-lefty-pride.jpeg");
-
-              @include md {
-                  grid-area: g1;
               }
-          }
-
-          #art {
-              background-image: url("../img/categories-art.jpg");
-
-              @include md {
-                  grid-area: g2;
+    
+              li {
+                  background-size: cover;
+                  background-position: center;
+                //   vertical-align: 50%;
+                //   text-align: center;
+                  
+                  text-shadow: $black;
+                //   font-size: 250%;
+    
+    
+    
+                  // height: 70vh;
+                //   border: 1px solid red;
+    
+                  a:link, a:visited{
+                      display: inline-block;
+                      height: 100%;
+                      width: 100%;
+                      text-decoration: none;
+                      color: blue;
+    
+                    >div{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        h1{
+                            font-size: rem-calc(30);
+                        }
+                    }
+    
+                      
+                  }
               }
-          }
-
-          #kitchen {
-              background-image: url("../img/categories-kitchen.jpg");
-
-              @include md {
-                  grid-area: g3;
+    
+              #pride {
+                  background-image: url("../img/categories-lefty-pride.jpeg");
+    
+                  @include md {
+                      grid-area: g1;
+                  }
               }
-          }
-          #garden {
-            background-image: url("../img/categories-gardening.jpg");
-
-            @include md {
-                grid-area: g4;
+    
+              #art {
+                  background-image: url("../img/categories-art.jpg");
+    
+                  @include md {
+                      grid-area: g2;
+                  }
+              }
+    
+              #kitchen {
+                  background-image: url("../img/categories-kitchen.jpg");
+    
+                  @include md {
+                      grid-area: g3;
+                  }
+              }
+              #garden {
+                background-image: url("../img/categories-gardening.jpg");
+    
+                @include md {
+                    grid-area: g4;
+                }
             }
-        }
+          }
       }
-  }
-}
+    }
