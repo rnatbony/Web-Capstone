@@ -430,6 +430,68 @@ textarea {
 /* =============
     Footer
 ============= */
+footer {
+  background-color: #e5e5e5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 16px auto 16px;
+  grid-template-columns: 16px auto 16px;
+      grid-template-areas: ". footer .";
+  padding: 16px 0;
+}
+footer > div {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: footer;
+}
+footer > div section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer > div aside {
+  margin-top: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+footer > div aside ul {
+  right: 0px;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer > div aside ul li {
+  margin-left: 16px;
+}
+footer > div aside ul li a:link,
+footer > div aside ul li a:visited {
+  color: #E09F3E;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+footer > div aside ul li a:link:hover, footer > div aside ul li a:link:active,
+footer > div aside ul li a:visited:hover,
+footer > div aside ul li a:visited:active {
+  color: #000;
+}
+@media (min-width: 1200px) {
+  footer > div aside ul li a:link,
+footer > div aside ul li a:visited {
+    font-size: 1.875rem;
+  }
+}
+
 /* =============
     Hero
 ============= */
@@ -498,10 +560,10 @@ textarea {
   font-size: 20px;
 }
 #hero .wrap {
-  width: 30%;
+  width: 50%;
   position: absolute;
   top: 60%;
-  left: 25%;
+  left: 33%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -660,8 +722,8 @@ textarea {
 }
 @media (min-width: 1200px) {
   #community {
-    -ms-grid-columns: auto 500px auto;
-    grid-template-columns: auto 500px auto;
+    -ms-grid-columns: auto 80px auto;
+    grid-template-columns: auto 80px auto;
   }
 }
 @media (min-width: 768px) {
@@ -790,6 +852,9 @@ textarea {
 /* =============
     Featured
 ============= */
+#featured {
+  padding-bottom: 16px;
+}
 @media (min-width: 768px) {
   #featured {
     display: -ms-grid;

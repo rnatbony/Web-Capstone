@@ -3,6 +3,8 @@
 ============= */
 #featured {
 
+    padding-bottom: 16px;
+
     @include md {
         display: grid;
         grid-template-columns: 16px auto 16px;
