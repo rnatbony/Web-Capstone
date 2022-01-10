@@ -3,105 +3,96 @@
 ============= */
 
 #community {
+    // border: 1px solid red;
 
-        padding-top: 16px;
-        padding-bottom: 16px;
-        
-          @include md{
-              display: grid;
-              grid-template-columns: 16px 16px;
-              grid-template-areas: ". community .";
-          }
-        
-          @include xl {
-              grid-template-columns: auto 1440px auto;
-          }
-        
-          >div {
-        
-              @include md {
-                  grid-area: community;
-              }
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1440px auto;
+        grid-template-areas: ". believe .";
+    }
 
-              h1 {
-                font-weight: 300;
-                font-size: rem-calc(44);
-                color: $light-red;
-                text-decoration: underline;
-              }
-        
-              ul {
-                  display: grid;
-                  gap: 24px;
-                  // grid-template-rows: 70vh 70vh 70vh;
-                  grid-template-rows: repeat(1, 50vh);
-        
-                  @include md {
-                      // grid-template-columns: 50vh auto;
-                      grid-template-columns: repeat(2, 1fr);
-                      grid-template-rows: 40vh 40vh;
-                      grid-template-areas:
-                          "g1 g2"
-                  }
-        
-                  @include xl {
-                      grid-template-columns: 50% auto;
-                      grid-template-rows: 30vh 0vh;
-                      grid-template-areas:
-                      "g1 g2"
-                  }
-        
-                  li {
-                      background-size: cover;
-                      background-position: center;
-                    //   vertical-align: 50%;
-                    //   text-align: center;
-                      
-                     //@error text-shadow: $black;
-                    //   font-size: 250%;
-        
-        
-        
-                      // height: 70vh;
-                    //   border: 1px solid red;
-        
-                     //@function a:link, a:visited{
-                       //   border: 1px solid red;
-                       //   display: inline-block;
-                        //  height: 100%;
-                       //   width: 100%;
-                       //   text-decoration: none;
-                       //   color: blue;
-        
-                        >div{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            height: 100%;
-                            p{
-                                font-size: rem-calc(30);
-                            }
-                        }
-        
-                          
-                      }
-                  }
-        
-                  #computer {
-                      background-image: url("/img/comm-left.jpeg");
-        
-                      @include md {
-                          grid-area: g1;
-                      }
-                  }
-        
-                  #hands {
-                      background-image: url("/img/comm-right.jpg");
-        
-                      @include md {
-                          grid-area: g2;
-                      }
-                  }
-              }
-          }
-        
+    >div {
+        // border: 1px solid red;
+
+        display: grid;
+        gap: 24px;
+
+        @include md {
+            grid-template-columns: 38vw auto;
+            grid-template-areas: "believe-l believe-r";
+        }
+
+        @include lg {
+            // grid-template-columns: 50vw auto;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include xl{
+            grid-area: believe;
+        }
+
+        section {
+
+            margin: 0 16px;
+
+            @include md {
+                grid-area: believe-r;
+                display: flex;
+                align-items: center;
+            }
+
+            >div {
+                border-top: 3px $light-red;
+                border-bottom: 3px $light-red;
+                padding: 16px 0px;
+
+                h1 {
+                    font-weight: 300;
+                    font-size: rem-calc(44);
+                    color: $light-red;
+                    text-decoration: underline;
+
+                    @include md {
+                        font-size: rem-calc(35);
+                        line-height: rem-calc(35);
+                        text-align: left;
+                    }
+
+                    @include xl {
+                        font-size: rem-calc(40);
+                    }
+                }
+
+                p {
+
+                    @include md {
+                        font-size: rem-calc(18);
+                    }
+
+                }
+            }
+
+        }
+
+        aside {
+
+            background-image: url("../img/lefty-joined.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+
+            @include md {
+                grid-area: believe-l;
+                height: 50vh;
+            }
+
+            @include lg {
+                height: 80vh;
+            }
+
+            // img{
+            //     width: 100%;
+            // }
+        }
+    }
+}
