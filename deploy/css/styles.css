@@ -634,16 +634,16 @@ textarea {
   display: -ms-grid;
   display: grid;
   gap: 24px;
-  -ms-grid-rows: 35vh 24px 35vh 24px 35vh 24px 35vh;
-  grid-template-rows: repeat(4, 35vh);
+  -ms-grid-rows: 50vh;
+  grid-template-rows: repeat(1, 50vh);
 }
 @media (min-width: 768px) {
   #community > div ul {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 40vh 40vh 40vh 40vh;
-    grid-template-rows: 40vh 40vh 40vh 40vh;
-        grid-template-areas: "g1 g2" "g3 g4";
+    -ms-grid-rows: 40vh 40vh;
+    grid-template-rows: 40vh 40vh;
+        grid-template-areas: "g1 g2";
   }
   #community > div ul > #pride {
     -ms-grid-row: 1;
@@ -652,14 +652,6 @@ textarea {
   }
   #community > div ul > #art {
     -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-  #community > div ul > #kitchen {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-  #community > div ul > #garden {
-    -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
 }
@@ -667,9 +659,9 @@ textarea {
   #community > div ul {
     -ms-grid-columns: 50% auto;
     grid-template-columns: 50% auto;
-    -ms-grid-rows: 30vh 30vh 30vh 30vh;
-    grid-template-rows: 30vh 30vh 30vh 30vh;
-        grid-template-areas: "g1 g2" "g3 g4";
+    -ms-grid-rows: 30vh 0vh;
+    grid-template-rows: 30vh 0vh;
+        grid-template-areas: "g1 g2";
   }
   #community > div ul > #pride {
     -ms-grid-row: 1;
@@ -678,14 +670,6 @@ textarea {
   }
   #community > div ul > #art {
     -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-  #community > div ul > #kitchen {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-  #community > div ul > #garden {
-    -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
 }
@@ -935,16 +919,8 @@ textarea {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
-  #community > div ul > #info {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
   #community > div #learn {
     -ms-grid-row: 3;
-    -ms-grid-column: 2;
-  }
-  #community > div ul > #learn {
-    -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
   #featured > div section ul #featured-1 {
@@ -978,10 +954,6 @@ textarea {
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
-  }
-  #community > div ul > #featured-3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
   }
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
@@ -1028,16 +1000,8 @@ textarea {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
-  #community > div ul > #info {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
   #community > div #learn {
     -ms-grid-row: 3;
-    -ms-grid-column: 2;
-  }
-  #community > div ul > #learn {
-    -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
   #featured > div section ul #featured-1 {
@@ -1071,10 +1035,6 @@ textarea {
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
-  }
-  #community > div ul > #featured-3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
   }
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
