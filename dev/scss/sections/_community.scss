@@ -4,95 +4,100 @@
 
 #community {
     // border: 1px solid red;
-
-    @include xl{
+    @include md {
         display: grid;
-        grid-template-columns: auto 1440px auto;
+        grid-template-columns: 16px auto 16px;
         grid-template-areas: ". community .";
     }
 
-    >div {
-        // border: 1px solid red;
+    @include xl {
+        grid-template-columns: auto 1440px auto;
+    }
 
-        display: grid;
-        gap: 24px;
+
+    >div {
 
         @include md {
-            grid-template-columns: 38vw auto;
-            grid-template-areas: "img-1 text-1";
-        }
-
-        @include lg {
-            // grid-template-columns: 50vw auto;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include xl{
             grid-area: community;
         }
 
-        section {
-
-            margin: 0 16px;
-
-            @include md {
-                grid-area: "img-1";
-                display: flex;
-                align-items: center;
-            }
-
-            >div {
-                border-top: 3px $light-red;
-                border-bottom: 3px $light-red;
-                padding: 16px 0px;
-
-                h1 {
-                    font-weight: 300;
-                    font-size: rem-calc(44);
-                    color: $light-red;
-                    text-decoration: underline;
-
-                    @include md {
-                        font-size: rem-calc(35);
-                        line-height: rem-calc(35);
-                        text-align: left;
-                    }
-
-                    @include xl {
-                        font-size: rem-calc(40);
-                    }
-                }
-
-                p {
-
-                    @include md {
-                        font-size: rem-calc(18);
-                    }
-
-                }
-            }
-
-        }
-
-        aside {
-
-            background-image: url("../img/lefty-joined.jpg");
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
+        h1 {
+            font-weight: 300;
+            font-size: rem-calc(44);
+            color: $light-red;
+            text-decoration: underline;
 
             @include md {
-                grid-area: img-1;
-                height: 50vh;
+                // padding-top: 30%;
+                font-size: rem-calc(60);
             }
 
             @include lg {
-                height: 80vh;
+                // padding-top: 10%;
+                font-size: rem-calc(80);
             }
+        }
 
-            // img{
-            //     width: 100%;
-            // }
+
+        section {
+
+
+            ul {
+                display: grid;
+                gap: 24px;
+                // grid-template-rows: 70vh 70vh 70vh;
+                grid-template-rows: 40vh 0vh 0vh;
+                grid-template-areas:
+                "g1 g2"
+                "3 g3";
+
+                @include md {
+                    // grid-template-columns: 50vh auto;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: 70vh 35vh;
+                    grid-template-areas:
+                        "g1 g2"
+                        "g3 g3";
+                }
+
+                @include xl {
+                    grid-template-columns: 60% auto;
+                    grid-template-rows: 35vh 35vh;
+                    grid-template-areas:
+                        "g1 g2"
+                        "g3 g3";
+                }
+
+                li {
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                #comm-1 {
+                    background-image: url("../img/lefty-joined.jpg");
+    
+                    @include md {
+                        background-position: bottom;
+                        grid-area: g1;
+                    }
+                }
+    
+                #comm-2 {
+                    background-image: url("../img/comm-right.jpg");
+    
+                    @include md {
+                        grid-area: g2;
+                    }
+                }
+    
+                #comm-3 {
+    
+                    @include md {
+                        grid-area: g3;
+                    }
+                }
+            }
         }
     }
+
 }
