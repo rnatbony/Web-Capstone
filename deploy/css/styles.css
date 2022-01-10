@@ -465,6 +465,23 @@ textarea {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+#categories .ribbon-highlight {
+  position: relative;
+  margin: 0.1em;
+}
+#categories .ribbon-highlight:before {
+  content: "";
+  z-index: -1;
+  left: -0.5em;
+  top: 0.1em;
+  border-width: 0.5em;
+  border-style: solid;
+  border-color: #540B0E;
+  position: absolute;
+  width: 100%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
 @media (min-width: 768px) {
   #categories {
     display: -ms-grid;
@@ -583,40 +600,139 @@ textarea {
 /* =============
     Community
 ============= */
-#community h1 {
-  font-weight: 300;
-  font-size: 2.75rem;
-  color: #9E2A2B;
-  text-decoration: underline;
+#community {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 @media (min-width: 768px) {
-  #community h1 {
-    font-size: 3.75rem;
+  #community {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 16px auto 16px;
+    grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". community .";
   }
 }
-@media (min-width: 992px) {
-  #community h1 {
-    font-size: 5rem;
+@media (min-width: 1200px) {
+  #community {
+    -ms-grid-columns: auto 1440px auto;
+    grid-template-columns: auto 1440px auto;
   }
 }
-#community .row:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-#community .column {
-  float: left;
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-}
-@media screen and (max-width: 500px) {
-  #community .column {
-    width: 100%;
+@media (min-width: 768px) {
+  #community > div {
+    grid-area: community;
   }
 }
-#community p {
-  text-align: center;
+@media (min-width: 768px) {
+  #community > div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+#community > div ul {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
+  -ms-grid-rows: 35vh 24px 35vh 24px 35vh 24px 35vh;
+  grid-template-rows: repeat(4, 35vh);
+}
+@media (min-width: 768px) {
+  #community > div ul {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 40vh 40vh 40vh 40vh;
+    grid-template-rows: 40vh 40vh 40vh 40vh;
+        grid-template-areas: "g1 g2" "g3 g4";
+  }
+  #community > div ul > #pride {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  #community > div ul > #art {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #community > div ul > #kitchen {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  #community > div ul > #garden {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+}
+@media (min-width: 1200px) {
+  #community > div ul {
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
+    -ms-grid-rows: 30vh 30vh 30vh 30vh;
+    grid-template-rows: 30vh 30vh 30vh 30vh;
+        grid-template-areas: "g1 g2" "g3 g4";
+  }
+  #community > div ul > #pride {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  #community > div ul > #art {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #community > div ul > #kitchen {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  #community > div ul > #garden {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+}
+#community > div ul li {
+  background-size: cover;
+  background-position: center;
+}
+#community > div ul li > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+#community > div ul li > div p {
+  font-size: 1.875rem;
+}
+#community > div #computer {
+  background-image: url("/img/comm-left.jpeg");
+}
+@media (min-width: 768px) {
+  #community > div #computer {
+    grid-area: g1;
+  }
+}
+#community > div #hands {
+  background-image: url("/img/comm-right.jpg");
+}
+@media (min-width: 768px) {
+  #community > div #hands {
+    grid-area: g2;
+  }
+}
+@media (min-width: 768px) {
+  #community > div #info {
+    grid-area: g3;
+  }
+}
+@media (min-width: 768px) {
+  #community > div #learn {
+    grid-area: g4;
+  }
 }
 
 /* =============
@@ -694,6 +810,20 @@ textarea {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
+  #featured > div section ul > #computer {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  #community > div #hands {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  #community > div #info {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
 }
 @media (min-width: 1200px) {
   #featured > div section ul {
@@ -714,6 +844,20 @@ textarea {
     -ms-grid-column: 2;
   }
   #categories > div ul #kitchen {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  #featured > div section ul > #computer {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  #community > div #hands {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #community > div #info {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
@@ -769,9 +913,48 @@ textarea {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
   }
+  #community > div #computer {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  #community > div ul > #computer {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  #community > div #hands {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #community > div ul > #hands {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #community > div #info {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  #community > div ul > #info {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  #community > div #learn {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  #community > div ul > #learn {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
   #featured > div section ul #featured-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  #community > div ul > #featured-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     -ms-grid-column: 1;
   }
   #featured > div section ul > #featured-1 {
@@ -784,6 +967,10 @@ textarea {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
+  #community > div ul > #featured-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
   #featured > div section ul #featured-2 {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
@@ -791,6 +978,10 @@ textarea {
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
+  }
+  #community > div ul > #featured-3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
   }
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
@@ -815,9 +1006,48 @@ textarea {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
   }
+  #community > div #computer {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  #community > div ul > #computer {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+  }
+  #community > div #hands {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #community > div ul > #hands {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #community > div #info {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  #community > div ul > #info {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  #community > div #learn {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  #community > div ul > #learn {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
   #featured > div section ul #featured-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  #community > div ul > #featured-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     -ms-grid-column: 1;
   }
   #featured > div section ul > #featured-1 {
@@ -830,6 +1060,10 @@ textarea {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
+  #community > div ul > #featured-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
   #featured > div section ul #featured-2 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -837,6 +1071,10 @@ textarea {
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
+  }
+  #community > div ul > #featured-3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
   }
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;

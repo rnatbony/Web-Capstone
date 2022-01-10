@@ -83,7 +83,7 @@
                   }
         
                   #computer {
-                      background-image: url("../img/comm-left.jpeg");
+                      background-image: url("/img/comm-left.jpeg");
         
                       @include md {
                           grid-area: g1;
@@ -91,7 +91,7 @@
                   }
         
                   #hands {
-                      background-image: url("../img/comm-right.jpg");
+                      background-image: url("/img/comm-right.jpg");
         
                       @include md {
                           grid-area: g2;
@@ -104,7 +104,7 @@
                           grid-area: g3;
                       }
                   }
-                  #garden {
+                  #learn {
         
                     @include md {
                         grid-area: g4;
