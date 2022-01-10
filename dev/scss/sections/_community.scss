@@ -3,6 +3,9 @@
 ============= */
 
 #community {
+
+    padding-top: 16px;
+    padding-bottom: 16px;
     // border: 1px solid red;
     @include md {
         display: grid;
@@ -11,7 +14,7 @@
     }
 
     @include xl {
-        grid-template-columns: auto 1440px auto;
+        grid-template-columns: auto 500px auto;
     }
 
 
@@ -38,6 +41,11 @@
             }
         }
 
+        p {
+            color: $dark-red;
+            font-weight: 200;
+        }
+
 
         section {
 
@@ -46,23 +54,24 @@
                 display: grid;
                 gap: 24px;
                 // grid-template-rows: 70vh 70vh 70vh;
-                grid-template-rows: 40vh 0vh 0vh;
+                grid-template-rows: 40vh 40vh;
+                grid-template-columns: 40vh;
                 grid-template-areas:
                 "g1 g2"
-                "3 g3";
+                "g3 g3";
 
                 @include md {
                     // grid-template-columns: 50vh auto;
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: 70vh 35vh;
+                    grid-template-columns: 50% auto;
+                    grid-template-rows: 50vh 50vh 25vh;
                     grid-template-areas:
                         "g1 g2"
                         "g3 g3";
                 }
 
                 @include xl {
-                    grid-template-columns: 60% auto;
-                    grid-template-rows: 35vh 35vh;
+                    grid-template-columns: 50% auto;
+                    grid-template-rows: 35vh 35vh 35vh;
                     grid-template-areas:
                         "g1 g2"
                         "g3 g3";
@@ -83,7 +92,8 @@
                 }
     
                 #comm-2 {
-                    background-image: url("../img/comm-right.jpg");
+                    background-image: url("../img/comm-left.jpg");
+                    text-align: center;
     
                     @include md {
                         grid-area: g2;

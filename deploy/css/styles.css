@@ -439,6 +439,7 @@ textarea {
   background-position: center;
   height: 60vh;
   text-align: left;
+  /*Resize the wrap to see the search bar change!*/
 }
 #hero div {
   height: 50vh;
@@ -459,6 +460,50 @@ textarea {
   #hero div h1 {
     font-size: 5rem;
   }
+}
+#hero body {
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  background: #f2f2f2;
+  font-family: "Open Sans", sans-serif;
+}
+#hero .search {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#hero .searchTerm {
+  width: 100%;
+  border: 3px solid #E09F3E;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+#hero .searchTerm:focus {
+  color: #000;
+}
+#hero .searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #E09F3E;
+  background: #E09F3E;
+  text-align: right;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+#hero .wrap {
+  width: 30%;
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #categories {
@@ -600,24 +645,34 @@ textarea {
 /* =============
     Community
 ============= */
+#community {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 @media (min-width: 768px) {
   #community {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 16px auto 16px;
     grid-template-columns: 16px auto 16px;
-        grid-template-areas: ". featured .";
+        grid-template-areas: ". community .";
   }
 }
 @media (min-width: 1200px) {
   #community {
-    -ms-grid-columns: auto 1440px auto;
-    grid-template-columns: auto 1440px auto;
+    -ms-grid-columns: auto 500px auto;
+    grid-template-columns: auto 500px auto;
   }
 }
 @media (min-width: 768px) {
   #community > div {
-    grid-area: featured;
+    grid-area: community;
+  }
+}
+@media (min-width: 768px) {
+  #community > div {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
   }
 }
 #community > div h1 {
@@ -636,70 +691,75 @@ textarea {
     font-size: 5rem;
   }
 }
+#community > div p {
+  color: #540B0E;
+  font-weight: 200;
+}
 #community > div section ul {
   display: -ms-grid;
   display: grid;
   gap: 24px;
-  -ms-grid-rows: 40vh 24px 0vh 24px 0vh;
-  grid-template-rows: 40vh 0vh 0vh;
-      grid-template-areas: "g1";
+  -ms-grid-rows: 40vh 24px 40vh;
+  grid-template-rows: 40vh 40vh;
+  -ms-grid-columns: 40vh;
+  grid-template-columns: 40vh;
+      grid-template-areas: "g1 g2" "g3 g3";
 }
 @media (min-width: 768px) {
   #community > div section ul {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 70vh 35vh;
-    grid-template-rows: 70vh 35vh;
-        grid-template-areas: "g1 g1" "g2 g3";
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
+    -ms-grid-rows: 50vh 50vh 25vh;
+    grid-template-rows: 50vh 50vh 25vh;
+        grid-template-areas: "g1 g2" "g3 g3";
   }
   #community > div section ul > #pride {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
   }
-  #categories > div ul #art {
+  #community > div section ul > #art {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #community > div section ul > #kitchen {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-  }
-  #categories > div ul #kitchen {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
   }
 }
 @media (min-width: 1200px) {
   #community > div section ul {
-    -ms-grid-columns: 60% auto;
-    grid-template-columns: 60% auto;
-    -ms-grid-rows: 35vh 35vh;
-    grid-template-rows: 35vh 35vh;
-        grid-template-areas: "g1 g2" "g1 g3";
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
+    -ms-grid-rows: 35vh 35vh 35vh;
+    grid-template-rows: 35vh 35vh 35vh;
+        grid-template-areas: "g1 g2" "g3 g3";
   }
   #community > div section ul > #pride {
     -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
+    -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
   }
-  #categories > div ul #art {
+  #community > div section ul > #art {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
-  #categories > div ul #kitchen {
+  #community > div section ul > #kitchen {
     -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
   }
 }
-#community > div section ul li a:link,
-#community > div section ul li a:visited {
+#community > div section ul li {
   background-size: cover;
   background-position: center;
-  height: 100%;
-  width: 100%;
-  display: inline-block;
+}
+#community > div section ul #comm-1 {
+  background-image: url("../img/lefty-joined.jpg");
 }
 @media (min-width: 768px) {
-  #community > div section ul #featured-1 {
+  #community > div section ul #comm-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
@@ -707,24 +767,24 @@ textarea {
     grid-area: g1;
   }
 }
-#community > div section ul #featured-1 a {
-  background-image: url("../img/featured-left.jpg");
+#community > div section ul #comm-2 {
+  background-image: url("../img/comm-left.jpg");
+  text-align: center;
 }
 @media (min-width: 768px) {
-  #community > div section ul #featured-2 {
+  #community > div section ul #comm-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: g2;
   }
 }
-#community > div section ul #featured-2 a {
-  background-image: url("../img/featured-right.jpg");
-}
 @media (min-width: 768px) {
-  #community > div section ul #featured-3 {
+  #community > div section ul #comm-3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: g3;
   }
-}
-#community > div section ul #featured-3 a {
-  background-image: url("../img/featured-middle.png");
 }
 
 /* =============
@@ -737,10 +797,6 @@ textarea {
     -ms-grid-columns: 16px auto 16px;
     grid-template-columns: 16px auto 16px;
         grid-template-areas: ". featured .";
-  }
-  #featured > div {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
   }
 }
 @media (min-width: 1200px) {
@@ -755,14 +811,6 @@ textarea {
   }
 }
 @media (min-width: 768px) {
-  #community > div {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-  #featured > div {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
   #featured > div {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -813,20 +861,22 @@ textarea {
   #categories > div ul #kitchen {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
   }
-  #featured > div section ul > #featured-1 {
+  #featured > div section ul > #comm-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
   }
-  #community > div section ul #featured-2 {
+  #community > div section ul #comm-2 {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
-  #community > div section ul #featured-3 {
+  #community > div section ul #comm-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
   }
 }
 @media (min-width: 1200px) {
@@ -850,20 +900,22 @@ textarea {
   #categories > div ul #kitchen {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
   }
-  #featured > div section ul > #featured-1 {
+  #featured > div section ul > #comm-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
   }
-  #community > div section ul #featured-2 {
+  #community > div section ul #comm-2 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
-  #community > div section ul #featured-3 {
+  #community > div section ul #comm-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
   }
 }
 #featured > div section ul li a:link,
@@ -879,7 +931,6 @@ textarea {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
     background-position: bottom;
     grid-area: g1;
   }
@@ -918,32 +969,32 @@ textarea {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
   }
-  #community > div section ul #featured-1 {
+  #community > div section ul #comm-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
   }
-  #community > div section ul > #featured-1 {
+  #community > div section ul > #comm-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
   }
-  #community > div section ul #featured-2 {
+  #community > div section ul #comm-2 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
-  #community > div section ul #featured-2 {
+  #community > div section ul > #comm-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #community > div section ul #comm-3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  #community > div section ul > #comm-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-  }
-  #community > div section ul #featured-3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-  }
-  #community > div section ul #featured-3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
   }
   #featured > div section ul #featured-1 {
     -ms-grid-row: 1;
@@ -954,7 +1005,6 @@ textarea {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
   }
   #featured > div section ul > #featured-1 {
     -ms-grid-row: 1;
@@ -966,25 +1016,27 @@ textarea {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
+  #community > div section ul > #featured-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
   #featured > div section ul #featured-2 {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
-  #featured > div section ul #featured-2 {
+  #featured > div section ul #featured-3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  #community > div section ul > #featured-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
   }
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
-  }
-  #featured > div section ul #featured-3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-  }
-  #featured > div section ul #featured-3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
   }
 }
 @media (min-width: 1200px) {
@@ -1005,32 +1057,32 @@ textarea {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
   }
-  #community > div section ul #featured-1 {
+  #community > div section ul #comm-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
   }
-  #community > div section ul > #featured-1 {
+  #community > div section ul > #comm-1 {
     -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
+    -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
   }
-  #community > div section ul #featured-2 {
+  #community > div section ul #comm-2 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
-  #community > div section ul #featured-2 {
+  #community > div section ul > #comm-2 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
-  #community > div section ul #featured-3 {
+  #community > div section ul #comm-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
-  #community > div section ul #featured-3 {
+  #community > div section ul > #comm-3 {
     -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
   }
   #featured > div section ul #featured-1 {
     -ms-grid-row: 1;
@@ -1039,9 +1091,8 @@ textarea {
   }
   #community > div section ul > #featured-1 {
     -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
+    -ms-grid-row-span: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
   }
   #featured > div section ul > #featured-1 {
     -ms-grid-row: 1;
@@ -1053,7 +1104,7 @@ textarea {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
-  #featured > div section ul #featured-2 {
+  #community > div section ul > #featured-2 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
   }
@@ -1065,13 +1116,15 @@ textarea {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }
-  #featured > div section ul #featured-3 {
+  #community > div section ul > #featured-3 {
     -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
   }
   #featured > div section ul #featured-3 {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
   }
 }
 #featured > div section ul #featured-3 a {
