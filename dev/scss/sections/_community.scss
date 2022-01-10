@@ -19,7 +19,7 @@
 
         @include md {
             grid-template-columns: 38vw auto;
-            grid-template-areas: "believe-l believe-r";
+            grid-template-areas: "img-1 text-1";
         }
 
         @include lg {
@@ -28,7 +28,7 @@
         }
 
         @include xl{
-            grid-area: believe;
+            grid-area: community;
         }
 
         section {
@@ -36,7 +36,7 @@
             margin: 0 16px;
 
             @include md {
-                grid-area: believe-r;
+                grid-area: "img-1";
                 display: flex;
                 align-items: center;
             }
@@ -82,7 +82,7 @@
             height: 100vh;
 
             @include md {
-                grid-area: believe-l;
+                grid-area: img-1;
                 height: 50vh;
             }
 
