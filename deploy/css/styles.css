@@ -722,8 +722,8 @@ footer > div aside ul li a:visited {
 }
 @media (min-width: 1200px) {
   #community {
-    -ms-grid-columns: auto 80px auto;
-    grid-template-columns: auto 80px auto;
+    -ms-grid-columns: auto 1400px auto;
+    grid-template-columns: auto 1400px auto;
   }
 }
 @media (min-width: 768px) {
@@ -761,16 +761,16 @@ footer > div aside ul li a:visited {
   display: -ms-grid;
   display: grid;
   gap: 24px;
-  -ms-grid-rows: 40vh 24px 40vh;
-  grid-template-rows: 40vh 40vh;
-  -ms-grid-columns: 40vh;
-  grid-template-columns: 40vh;
+  -ms-grid-rows: 70vh 24px 70vh 24px 70vh;
+  grid-template-rows: 70vh 70vh 70vh;
+  -ms-grid-columns: 40vh 24px 40vh 24px 20vh;
+  grid-template-columns: 40vh 40vh 20vh;
       grid-template-areas: "g1 g2" "g3 g3";
 }
 @media (min-width: 768px) {
   #community > div section ul {
-    -ms-grid-columns: 50% auto;
-    grid-template-columns: 50% auto;
+    -ms-grid-columns: 50vh auto;
+    grid-template-columns: 50vh auto;
     -ms-grid-rows: 50vh 50vh 25vh;
     grid-template-rows: 50vh 50vh 25vh;
         grid-template-areas: "g1 g2" "g3 g3";
@@ -792,8 +792,8 @@ footer > div aside ul li a:visited {
 }
 @media (min-width: 1200px) {
   #community > div section ul {
-    -ms-grid-columns: 50% auto;
-    grid-template-columns: 50% auto;
+    -ms-grid-columns: 50vh auto;
+    grid-template-columns: 50vh auto;
     -ms-grid-rows: 35vh 35vh 35vh;
     grid-template-rows: 35vh 35vh 35vh;
         grid-template-areas: "g1 g2" "g3 g3";
@@ -831,7 +831,6 @@ footer > div aside ul li a:visited {
 }
 #community > div section ul #comm-2 {
   background-image: url("../img/comm-left.jpg");
-  text-align: center;
 }
 @media (min-width: 768px) {
   #community > div section ul #comm-2 {
@@ -845,6 +844,7 @@ footer > div aside ul li a:visited {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
+    text-align: center;
     grid-area: g3;
   }
 }
@@ -853,7 +853,7 @@ footer > div aside ul li a:visited {
     Featured
 ============= */
 #featured {
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 @media (min-width: 768px) {
   #featured {
